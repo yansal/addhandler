@@ -1,0 +1,27 @@
+<html>
+
+<form action="/addhandler" method="POST">
+    <textarea name="program" required rows="24" cols="80" placeholder='package main
+
+import "net/http"
+    
+func H(w http.ResponseWriter, r *http.Request) {
+    w.Write([]byte("hello from H"))
+}
+    '></textarea>
+
+    <br>
+    <button>build and serve</button>
+
+</form>
+
+<ul>
+{{ range $key, $value := . }}
+<li>
+    <a href="{{$key}}">{{$key}}</a>
+    <br>
+    <code>{{$value}}</code>
+</li>
+{{end}}
+</ul>
+</html>
