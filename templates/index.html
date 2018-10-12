@@ -4,11 +4,10 @@
     <textarea name="program" required rows="24" cols="80" placeholder='package main
 
 import "net/http"
-    
+
 func H(w http.ResponseWriter, r *http.Request) {
     w.Write([]byte("hello from H"))
-}
-    '></textarea>
+}'></textarea>
 
     <br>
     <button>build and serve</button>
@@ -20,7 +19,7 @@ func H(w http.ResponseWriter, r *http.Request) {
 <li>
     <a href="{{$key}}">{{$key}}</a>
     <br>
-    <code>{{$value}}</code>
+    <pre>{{$value}}</pre>
 </li>
 {{end}}
 </ul>
